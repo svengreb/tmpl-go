@@ -6,9 +6,33 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.1.1
+
+![Release Date: 2020-09-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/5) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/2)
+
+⇅ [Show all commits][repo-compare-tag-v0.1.0_v0.1.1]
+
+## Bug Fixes
+
+<details>
+<summary><strong>YAML multiline string without "block chomping" for config go-header linter causes golangci-lint to fail</strong> — #6 ⇄ #7 (⊶ 910c06ff)</summary>
+
+↠ The configuration of the [go-header][] linter is defined in the [golangci-lint][] YAML configuration, but the [YAML multiline-string][yaml-multiline] doesn't used ["block chomping][yaml-spec-1.2#block_chomping] which resulted in a final newline at the end of the template.
+This caused golangci-lint to fail because the configured template content doesn't match the parsed text.
+To fix this problem the YAML _block chomping_ syntax is now used for the multiline-string so that the final newline at the end gets stripped.
+
+</details>
+
+<details>
+<summary><strong>Invalid branch & CI workflow name in README badges </strong> — #8 ⇄ #9 (⊶ e138ca15)</summary>
+
+↠ The name of the branch for the badge URL of the repository changelog was `master` instead of `main` and the GitHub CI action workflow used the uppercase name `CI` instead of `ci`.
+
+</details>
+
 # 0.1.0
 
-![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-08-26&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/4) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/1)
+![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/4) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/1)
 
 ⇅ [Show all commits][repo-compare-tag-init_v0.1.0]
 
@@ -67,6 +91,8 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+[golangci-lint]: https://github.com/golangci/golangci-lint
+
 <!-- v0.1.0 -->
 
 [gh-go-wiki-modules]: https://github.com/golang/go/wiki/Modules
@@ -74,6 +100,12 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-tmpl]: https://github.com/svengreb/tmpl
 [go-rln-1.15.0]: https://golang.org/doc/go1.15
 [golangci-lint-action]: https://github.com/golangci/golangci-lint-action
-[golangci-lint]: https://github.com/golangci/golangci-lint
 [repo-action-query-ci]: https://github.com/svengreb/tmpl-go/actions?query=workflow%3ACI
 [repo-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl-go/compare/87400d37...v0.1.0
+
+<!-- v0.1.1 -->
+
+[go-header]: https://github.com/denis-tingajkin/go-header
+[repo-compare-tag-v0.1.0_v0.1.1]: https://github.com/svengreb/tmpl-go/compare/v0.1.0...v0.1.1
+[yaml-multiline]: https://yaml-multiline.info
+[yaml-spec-1.2#block_chomping]: https://yaml.org/spec/1.2/spec.html#id2794534
