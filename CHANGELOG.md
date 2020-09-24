@@ -6,6 +6,21 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.2.0
+
+![Release Date: 2020-09-24](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-24&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/6) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/3)
+
+⇅ [Show all commits][repo-compare-tag-v0.1.1_v0.2.0]
+
+## Features
+
+<details>
+<summary><strong>Basic testing in CI workflow</strong> — #10 ⇄ #11 (⊶ f65759e6)</summary>
+
+↠ Before the CI workflow only ran _Node_ and _Go_ based linters, but doesn't took _Go_ tests into account. This has been changed by adding a new job to run tests with _Go_'s official `go test` command with enabled coverage and race detector.
+
+</details>
+
 # 0.1.1
 
 ![Release Date: 2020-09-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/5) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/2)
@@ -109,3 +124,7 @@ otherwise Markdown elements are not parsed and rendered!
 [repo-compare-tag-v0.1.0_v0.1.1]: https://github.com/svengreb/tmpl-go/compare/v0.1.0...v0.1.1
 [yaml-multiline]: https://yaml-multiline.info
 [yaml-spec-1.2#block_chomping]: https://yaml.org/spec/1.2/spec.html#id2794534
+
+<!-- v0.2.0 -->
+
+[repo-compare-tag-v0.1.1_v0.2.0]: https://github.com/svengreb/tmpl-go/compare/v0.1.1...v0.2.0
