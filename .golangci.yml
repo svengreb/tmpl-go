@@ -138,6 +138,7 @@ linters-settings:
     ignore-words:
       - tmpl
       - tmpl-go
+      - tmplgo
 
 # Options for analysis runs.
 run:
