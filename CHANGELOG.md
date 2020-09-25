@@ -6,6 +6,58 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.3.0
+
+![Release Date: 2020-09-25](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-25&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/7) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/4)
+
+⇅ [Show all commits][repo-compare-tag-v0.2.0_v0.3.0]
+
+## Features
+
+<details>
+<summary><strong>Go stub package and test</strong> — #12 ⇄ #13 (⊶ 66658a15)</summary>
+
+↠ To prevent `golangci-lint` and the CI workflow `test` job from failing a stub file for the `tmplgo` package has been added along with a example test (`tmplgo_test` package).
+This also comes with the benefit of providing a simple starting point for users of this template repository.
+
+</details>
+
+## Improvements
+
+<details>
+<summary><strong>Optimize Go version matrix strategy for CI workflow</strong> — #16 ⇄ #17 (⊶ bda13d8a)</summary>
+
+↠ Before the CI workflow used a matrix strategy to run the `lint-go` and `test` jobs, but this has been improved to make the workflow run faster by avoiding unnecessary steps:
+
+- The `lint-go` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-go-1.15] only on _Linux_ because `golangci-lint` doesn't care about the _Go_ version and OS it runs on but only statically checks the source code.
+- The `test` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-go-1.15].
+
+These changes help to keep the required GitHub Action run minutes for the account of this repository as small as possible without wasting resources for unnecessary tasks.
+
+</details>
+
+<details>
+<summary><strong>Adapt CI workflow "on" run configurations from "tmpl" template repository</strong> — #18 ⇄ #19 (⊶ ec1539cd)</summary>
+
+↠ Before the CI workflow only used the `push` configuration for the `on` field. To improve the performance a more fine grained configuration is now used that has already been defined in [the "tmpl" template repository][gh-tmpl]:
+
+- Only runs on pushes to the `main` branch.
+- Only runs on pushes for `v*` tags.
+- Always runs for pushes to PRs.
+
+These changes help to keep the required GitHub Action run minutes for the account of this repository as small as possible without wasting resources for unnecessary runs.
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Adapt to "tmpl" template repository version 0.4.0</strong> — #14 ⇄ #15 (⊶ 9d50ec0e)</summary>
+
+↠ Adapted to ["tmpl" version 0.4.0][gh-tmpl-rel-v0.4.0] which includes a [optimized OS version matrix strategy for Node based tasks in the CI workflow][svengreb/tmpl#46] that helps to keep the required GitHub Action run minutes for the account of this repository as small as possible without wasting resources for unnecessary tasks.
+
+</details>
+
 # 0.2.0
 
 ![Release Date: 2020-09-24](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-24&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/6) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/3)
@@ -106,13 +158,13 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+[gh-tmpl]: https://github.com/svengreb/tmpl
 [golangci-lint]: https://github.com/golangci/golangci-lint
 
 <!-- v0.1.0 -->
 
 [gh-go-wiki-modules]: https://github.com/golang/go/wiki/Modules
 [gh-tmpl-release-v0.3.0]: https://github.com/svengreb/tmpl/releases/tag/v0.3.0
-[gh-tmpl]: https://github.com/svengreb/tmpl
 [go-rln-1.15.0]: https://golang.org/doc/go1.15
 [golangci-lint-action]: https://github.com/golangci/golangci-lint-action
 [repo-action-query-ci]: https://github.com/svengreb/tmpl-go/actions?query=workflow%3ACI
@@ -128,3 +180,10 @@ otherwise Markdown elements are not parsed and rendered!
 <!-- v0.2.0 -->
 
 [repo-compare-tag-v0.1.1_v0.2.0]: https://github.com/svengreb/tmpl-go/compare/v0.1.1...v0.2.0
+
+<!-- v0.3.0 -->
+
+[gh-tmpl-rel-v0.4.0]: https://github.com/svengreb/tmpl/releases/tag/v0.4.0
+[go-rln-go-1.15]: https://golang.org/doc/go1.15
+[repo-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl-go/compare/v0.2.0...v0.3.0
+[svengreb/tmpl#46]: https://github.com/svengreb/tmpl/issues/46
