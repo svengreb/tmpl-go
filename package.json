@@ -1,5 +1,5 @@
 {
-  "name": "tmpl-go",
+  "name": "@svengreb/tmpl-go",
   "version": "0.3.0",
   "description": "A repository template for Go projects",
   "author": {
