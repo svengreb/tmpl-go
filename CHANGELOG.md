@@ -6,6 +6,35 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.4.0
+
+![Release Date: 2020-10-31](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-10-31&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/8) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/5)
+
+⇅ [Show all commits][repo-compare-tag-v0.3.0_v0.4.0]
+
+## Features
+
+<details>
+<summary><strong>Update to golangci-lint version 1.32.0</strong> — #20 ⇄ #21 (⊶ 072aad99)</summary>
+
+↠ The currently latest [`golangci-lint` version 1.32.0][golangci-lint-rln-1.32.0] introduced new linters that have been configured for this template repository:
+
+1. [wrapcheck][] — Checks that errors returned from external packages are wrapped.
+   This linter is **disabled by default**, but has been **enabled** for this template repository to help tp reduce error context loss.
+2. [errorlint][] — Helps to make more efficient use of the error wrapping scheme introduced in Go 1.13.
+   This linter is **disabled by default**, but has been **enabled** for this template repository to help to use Go's new error handling concept.
+3. [tparallel][] — Detects inappropriate usage of `t.Parallel()` method in Go tests.
+   This linter is **disabled by default**, but has been **enabled** for this template repository to help to prevent parallelism errors in tests.
+
+</details>
+
+<details>
+<summary><strong>Update to "tmpl" template repository version 0.5.0</strong> — #22 ⇄ #23 (⊶ 5da341c3)</summary>
+
+↠ Updated to ["tmpl" version 0.5.0][gh-tmpl-rel-v0.5.0] which now uses a [namespace for the NPM package name][svengreb/tmpl#48] that helps to prevent collisions with already existing NPM packages like [tmpl][npm-tmpl].
+
+</details>
+
 # 0.3.0
 
 ![Release Date: 2020-09-25](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-25&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/7) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/4)
@@ -187,3 +216,14 @@ otherwise Markdown elements are not parsed and rendered!
 [go-rln-go-1.15]: https://golang.org/doc/go1.15
 [repo-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl-go/compare/v0.2.0...v0.3.0
 [svengreb/tmpl#46]: https://github.com/svengreb/tmpl/issues/46
+
+<!-- v0.4.0 -->
+
+[errorlint]: https://github.com/polyfloyd/go-errorlint
+[gh-tmpl-rel-v0.5.0]: https://github.com/svengreb/tmpl/releases/tag/v0.5.0
+[golangci-lint-rln-1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
+[npm-tmpl]: https://www.npmjs.com/package/tmpl
+[repo-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl-go/compare/v0.3.0...v0.4.0
+[svengreb/tmpl#48]: https://github.com/svengreb/tmpl/issues/48
+[tparallel]: https://github.com/moricho/tparallel
+[wrapcheck]: https://github.com/tomarrell/wrapcheck
