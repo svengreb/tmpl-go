@@ -19,7 +19,6 @@ updates:
     labels:
       - "scope-quality"
       - "scope-security"
-      - "target-base"
 
   - package-ecosystem: "gomod"
     directory: "/"
@@ -30,7 +29,6 @@ updates:
     labels:
       - "scope-quality"
       - "scope-security"
-      - "target-base"
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -41,4 +39,3 @@ updates:
     labels:
       - "scope-quality"
       - "scope-security"
-      - "target-base"
