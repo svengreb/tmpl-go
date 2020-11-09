@@ -18,7 +18,7 @@ Before you continue with these contribution guidelines we highly recommend to re
 
 ### Repository Assignment
 
-tmpl is [a modular project][gh-profile-repo-search] of multiple [GitHub repository templates][gh-docs-repos-tmpl]. Each repository has a different focus for different use cases, project structures and programming languages.
+tmpl is [a modular project][gh-profile-repo-search] of multiple [template repositories][gh-docs-repos-tmpl]. Each repository has a different focus for different use cases, project structures and programming languages.
 
 **Please make sure to determine the correct repository before you continue!**
 Contributions related to a [specialized template][gh-profile-repo-search], like this one for [Go][], belong to the specific repository while contributions related to [the base template][gh-tmpl] are welcome in its repository. This helps all core team members, committers and maintainer to process every contribution faster without organization overhead.

@@ -1,7 +1,7 @@
 {
   "name": "@svengreb/tmpl-go",
   "version": "0.4.0",
-  "description": "A repository template for Go projects",
+  "description": "A template repository for Go projects",
   "author": {
     "name": "Sven Greb",
     "email": "development@svengreb.de",
@@ -15,8 +15,16 @@
   "bugs": {
     "url": "https://github.com/svengreb/tmpl-go/issues"
   },
-  "private": true,
   "license": "MIT",
+  "private": true,
+  "engines": {
+    "yarn": "^1.19.0"
+  },
+  "workspaces": [
+    "web/apps",
+    "web/packages/@svengreb/*",
+    "web/www"
+  ],
   "scripts": {
     "format": "run-s format:pretty",
     "format:pretty": "prettier --write .",
