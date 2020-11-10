@@ -6,6 +6,40 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.5.0
+
+![Release Date: 2020-11-10](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-10&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/9) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/6)
+
+⇅ [Show all commits][repo-compare-tag-v0.4.0_v0.5.0]
+
+## Features
+
+<details>
+<summary><strong>Initial project documentation</strong> — #31 ⇄ #32 (⊶ d1a77a3d)</summary>
+
+↠ Wrote the initial project documentation for the `README.md` file that includes…
+
+1. …an project introduction and motivation.
+2. …an overview of the project features.
+3. …an overview of the directory structure.
+4. …more detailed sections about all features.
+5. …some basic instructions how to use this template repository.
+6. …information about references used for this template repository.
+7. …information about how to contribute to this project.
+
+Each directory documented in step 3 contains an individual documentation with more detailed information about it.
+The `package.json` file has also been extended to include the [Yarn][yarn-docs-ws]/[NPM][npm-docs-cli-v7-ws] `workspaces` field.
+
+</details>
+
+<details>
+<summary><strong>Update to <code>tmpl</code> template repository version 0.7.0</strong> — #24, #33 ⇄ #25, #34 (⊶ 793efc26, 81385803)</summary>
+
+↠ Updated to [`tmpl` version 0.7.0][gh-tmpl-rel-v0.7.0] (including version [0.6.0][gh-tmpl-rel-v0.6.0]) which introduced a configuration for [automated dependency updates and security alerts][svengreb/tmpl#52] with [Dependabot][]. Next to the included update configurations for the [CI/CD GitHub action workflow][tmpl#cicd] and [Yarn/NPM dependencies][tmpl#node], the file has been extended to support [Go modules][go-doc-mod].
+This version also updated to the latest Node.js package dependency & GitHub Action versions.
+
+</details>
+
 # 0.4.0
 
 ![Release Date: 2020-10-31](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-10-31&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/8) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/5)
@@ -227,3 +261,16 @@ otherwise Markdown elements are not parsed and rendered!
 [svengreb/tmpl#48]: https://github.com/svengreb/tmpl/issues/48
 [tparallel]: https://github.com/moricho/tparallel
 [wrapcheck]: https://github.com/tomarrell/wrapcheck
+
+<!-- v0.5.0 -->
+
+[dependabot]: https://dependabot.com
+[gh-tmpl-rel-v0.6.0]: https://github.com/svengreb/tmpl/releases/tag/v0.6.0
+[gh-tmpl-rel-v0.7.0]: https://github.com/svengreb/tmpl/releases/tag/v0.7.0
+[go-doc-mod]: https://golang.org/ref/mod
+[npm-docs-cli-v7-ws]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
+[repo-compare-tag-v0.4.0_v0.5.0]: https://github.com/svengreb/tmpl-go/compare/v0.4.0...v0.5.0
+[svengreb/tmpl#52]: https://github.com/svengreb/tmpl/issues/52
+[tmpl#cicd]: https://github.com/svengreb/tmpl#cicd-action-workflow
+[tmpl#node]: https://github.com/svengreb/tmpl#nodejs-yarn-and-npm
+[yarn-docs-ws]: https://classic.yarnpkg.com/docs/workspaces
