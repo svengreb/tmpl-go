@@ -46,7 +46,7 @@ The next directory structure shown below is specially designed for Go projects w
 ```raw
 tmpl-go
 ├─ api
-├─ app
+├─ apps
 ├─ config
 ├─ docs
 ├─ examples
@@ -59,7 +59,7 @@ tmpl-go
 Please see the [“Features“](#features) section below for more details about provided files in this template repository. The detailed documentation about each directory is located in individual `README.md` files within the directory itself.
 
 - [`/api`][gh-tree-api] — The directory for API definition files like [Protocol Buffers][protobuf], [JSON schemas][json-schema] or [OpenAPI][]/[Swagger][] specifications. See the [dedicated `/api` directory documentation][gh-blob-api-readme] for more details and usage examples.
-- [`/app`][gh-tree-app] — The directory for project application(s) using the Go `main` package that can be compiled to the binary executable. See the [dedicated `/app` directory documentation][gh-blob-app-readme] for more details and usage examples.
+- [`/apps`][gh-tree-apps] — The directory for project application(s) using the Go `main` package that can be compiled to the binary executable. See the [dedicated `/apps` directory documentation][gh-blob-apps-readme] for more details and usage examples.
 - [`/config`][gh-tree-config] — The directory for all configurations such as container orchestration deployments, templates for applications or distribution bundles. See the [dedicated `/config` directory documentation][gh-blob-config-readme] for more details and usage examples.
 - [`/docs`][gh-tree-docs] — The directory for project documentations, [runbooks][wikip-runbook] and any other kind of textual reference.. See the [dedicated `/docs` directory documentation][gh-blob-docs-readme] for more details and usage examples.
 - [`/examples`][gh-tree-examples] — The directory for all configurations such as container orchestration deployments, templates for applications or distribution bundles. See the [dedicated `/examples` directory documentation][gh-blob-examples-readme] for more details and usage examples.
@@ -148,7 +148,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [dependabot]: https://dependabot.com
 [gh-act-ci]: https://github.com/svengreb/tmpl-go/actions?query=workflow%3Aci
 [gh-blob-api-readme]: https://github.com/svengreb/tmpl-go/blob/main/api/README.md
-[gh-blob-app-readme]: https://github.com/svengreb/tmpl-go/blob/main/app/README.md
+[gh-blob-apps-readme]: https://github.com/svengreb/tmpl-go/blob/main/apps/README.md
 [gh-blob-config-readme]: https://github.com/svengreb/tmpl-go/blob/main/config/README.md
 [gh-blob-docs-readme]: https://github.com/svengreb/tmpl-go/blob/main/docs/README.md
 [gh-blob-dot_github-dependabot.yml]: https://github.com/svengreb/tmpl-go/blob/main/.github/dependabot.yml
@@ -174,7 +174,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-tmpl#ov]: https://github.com/svengreb/tmpl#overview
 [gh-tmpl#usage]: https://github.com/svengreb/tmpl#usage
 [gh-tree-api]: https://github.com/svengreb/tmpl-go/tree/main/api
-[gh-tree-app]: https://github.com/svengreb/tmpl-go/tree/main/app
+[gh-tree-apps]: https://github.com/svengreb/tmpl-go/tree/main/apps
 [gh-tree-config]: https://github.com/svengreb/tmpl-go/tree/main/config
 [gh-tree-docs]: https://github.com/svengreb/tmpl-go/tree/main/docs
 [gh-tree-examples]: https://github.com/svengreb/tmpl-go/tree/main/examples

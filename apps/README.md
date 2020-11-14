@@ -1,4 +1,4 @@
-The `/app` directory stores source code of project application(s) using the Go `main` package that can be compiled to the binary executable. It is often named `/cmd` instead, but because the name is not so appropriate and could lead to false assumptions it has been renamed for this template repository to better describe the actual content.
+The `/apps` directory stores source code of project application(s) using the Go `main` package that can be compiled to the binary executable. It is often named `/cmd` instead, but because the name is not so appropriate and could lead to false assumptions it has been renamed for this template repository to better describe the actual content.
 
 ## Directory Structure
 
@@ -13,7 +13,7 @@ Please see the [example](#example) below for a common and practical usage patter
 Given the API defined in the [example of the `/api` directory][gh-blob-api-readme#example] and additionally assuming another service application named `notes-sync` the structure for the application could be created as follows:
 
 ```raw
-app
+apps
 ├─ notes
 │  ├─ config
 │  └─ internal
