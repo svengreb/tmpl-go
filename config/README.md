@@ -1,7 +1,7 @@
 The `/config` directory, also often named `contrib`, stores all configurations of any kind such as…
 
 - …container orchestration deployments — tools like Automated scaling and management systems like [Kubernetes][] or [Docker Compose][docker-compose] as well as tools to manage and process their configurations like [Kustomize][] and [Helm][].
-- …application configuration templates — reference, example or starter files that contain default values configurations of applications in the [`/app` directory][gh-tree-app].
+- …application configuration templates — reference, example or starter files that contain default values configurations of applications in the [`/apps` directory][gh-tree-apps].
 - …platform and distribution specific configurations — basic, platform specific configuration files for distribution or deployment purposes like for example [systemd][] units, process managers/supervisors or reverse proxies.
 
 ## Directory Structure
@@ -14,7 +14,7 @@ Given the [example of the `/api` directory][gh-blob-api-readme#example] the stru
 
 ```raw
 config
-├─ app
+├─ apps
 │  └─ notes
 ├─ deployment
 │  ├─ docker
@@ -67,7 +67,7 @@ Next to the experience with own projects and [golang-standards/project-layout][]
 [gh-loki-tree-production]: https://github.com/grafana/loki/tree/master/production
 [gh-moby-tree-contrib]: https://github.com/moby/moby/tree/master/contrib
 [gh-nats-server-tree-docker]: https://github.com/nats-io/nats-server/tree/master/docker
-[gh-tree-app]: https://github.com/svengreb/tmpl-go/tree/main/app
+[gh-tree-apps]: https://github.com/svengreb/tmpl-go/tree/main/apps
 [gh-velero-tree-config]: https://github.com/vmware-tanzu/velero/tree/main/config
 [golang-standards/project-layout]: https://github.com/golang-standards/project-layout
 [helm]: https://helm.sh
