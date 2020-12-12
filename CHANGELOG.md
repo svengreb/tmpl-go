@@ -6,11 +6,62 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.6.0
+
+![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/10) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/7)
+
+⇅ [Show all commits][gh-compare-tag-v0.5.0_v0.6.0]
+
+## Improvements
+
+<details>
+<summary><strong>Renamed <code>/app</code> to <code>/apps</code></strong> — #37 ⇄ #38 (⊶ 5551df2f)</summary>
+
+↠ Using the majority `apps` as name for the [`/app` directory][gh-tree-app] conveys a better understanding of the actual use case and makes it more clear that it can contain more than one application in the [monorepo][trunkbasedev-monorepos] layout.
+This also aligns with the [example in the `/web` directory documentation][gh-tree-web#example] and the Yarn/NPM [workspace configuration in the `package.json` file][gh-blob-package.json#l24] where both using the `apps` directory.
+
+</details>
+
+<details>
+<summary><strong>Disabled `errorlint` to prevent false-positive errors</strong> — #39 ⇄ #40 (⊶ 28f888a2)</summary>
+
+↠ In #21 `golangci-lint` was updated to the [currently latest version 1.32.0][gh-golangci/golangci-lint-rl-v1.32.0] which introduced the [errorlint][] that has been enabled for this template repository. As it turns out it causes a lot of false-positives errors for code lines that explicitly do not wrap the error to prevent it become part of the public API.
+Therefore the linter has been disabled again because the update also introduced the new [wrapcheck][] linter which helps to prevent that errors from external packages are exposed to the public API.
+
+</details>
+
+<details>
+<summary><strong>Update to “tmpl“ template repository version 0.8.0</strong> — #45 ⇄ #46 (⊶ 39cf0b85)</summary>
+
+↠ Updated to [“tmpl“ version 0.8.0][gh-svengreb/tmpl-rl-v0.8.0] which [reduces _Dependabot_ PR noise for the NPM package ecosystem][gh-svengreb/tmpl#65].
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Prepared project/repository publication</strong> — #35 ⇄ #36 (⊶ 0aec1aef)</summary>
+
+↠ Before switching the [GitHub repository visibility][gh-docs-repo_vis] to “public“ a few adjustments had to be made.
+Basically #22 was reverted, taking the changes from #23 into account, so that SVG images like the repository hero are using the URLs for public repositories again instead of the ones that allow to resolve the files in private repositories.
+
+</details>
+
+<details>
+<summary><strong>Node.js package dependency & GitHub action version updates</strong> — #42, #47</summary>
+
+↠ Bumped outdated Node.js package dependencies and GitHub actions to their latest versions:
+
+- #42 (⊶ 6e91700f) [`prettier`][gh-prettier/prettier] from [2.1.2 to 2.2.1][gh-prettier/prettier-comp-v2.1.2_v2.2.1] — The the [official Prettier 2.2 introduction blog post][prettier-blog-rl_2.2] for more details.
+- #47 (⊶ 90c22f24) [`actions/setup-node`][gh-actions/setup-node] from [v2.1.2 to v2.1.3][gh-actions/setup-node-comp-v2.1.2_27082cec]
+
+</details>
+
 # 0.5.0
 
 ![Release Date: 2020-11-10](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-11-10&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/9) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.5.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/6)
 
-⇅ [Show all commits][repo-compare-tag-v0.4.0_v0.5.0]
+⇅ [Show all commits][gh-compare-tag-v0.4.0_v0.5.0]
 
 ## Features
 
@@ -44,7 +95,7 @@ This version also updated to the latest Node.js package dependency & GitHub Acti
 
 ![Release Date: 2020-10-31](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-10-31&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/8) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.4.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/5)
 
-⇅ [Show all commits][repo-compare-tag-v0.3.0_v0.4.0]
+⇅ [Show all commits][gh-compare-tag-v0.3.0_v0.4.0]
 
 ## Features
 
@@ -73,7 +124,7 @@ This version also updated to the latest Node.js package dependency & GitHub Acti
 
 ![Release Date: 2020-09-25](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-25&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/7) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.3.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/4)
 
-⇅ [Show all commits][repo-compare-tag-v0.2.0_v0.3.0]
+⇅ [Show all commits][gh-compare-tag-v0.2.0_v0.3.0]
 
 ## Features
 
@@ -125,7 +176,7 @@ These changes help to keep the required GitHub Action run minutes for the accoun
 
 ![Release Date: 2020-09-24](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-24&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/6) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.2.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/3)
 
-⇅ [Show all commits][repo-compare-tag-v0.1.1_v0.2.0]
+⇅ [Show all commits][gh-compare-tag-v0.1.0_v0.2.0]
 
 ## Features
 
@@ -140,7 +191,7 @@ These changes help to keep the required GitHub Action run minutes for the accoun
 
 ![Release Date: 2020-09-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/5) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.1&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/2)
 
-⇅ [Show all commits][repo-compare-tag-v0.1.0_v0.1.1]
+⇅ [Show all commits][gh-compare-tag-v0.1.0_v0.1.1]
 
 ## Bug Fixes
 
@@ -164,7 +215,7 @@ To fix this problem the YAML _block chomping_ syntax is now used for the multili
 
 ![Release Date: 2020-09-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-09-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/4) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.1.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/1)
 
-⇅ [Show all commits][repo-compare-tag-init_v0.1.0]
+⇅ [Show all commits][gh-compare-tag-init_v0.1.0]
 
 This is the initial release version of _tmpl-go_.
 The basic project setup, structure and development workflow has been bootstrapped by [the base _tmpl_ template repository][gh-tmpl].
@@ -221,8 +272,12 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+<!-- Shared Links -->
+
+[errorlint]: https://github.com/polyfloyd/go-errorlint
 [gh-tmpl]: https://github.com/svengreb/tmpl
 [golangci-lint]: https://github.com/golangci/golangci-lint
+[wrapcheck]: https://github.com/tomarrell/wrapcheck
 
 <!-- v0.1.0 -->
 
@@ -231,46 +286,61 @@ otherwise Markdown elements are not parsed and rendered!
 [go-rln-1.15.0]: https://golang.org/doc/go1.15
 [golangci-lint-action]: https://github.com/golangci/golangci-lint-action
 [repo-action-query-ci]: https://github.com/svengreb/tmpl-go/actions?query=workflow%3ACI
-[repo-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl-go/compare/87400d37...v0.1.0
+[gh-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl-go/compare/87400d37...v0.1.0
 
 <!-- v0.1.1 -->
 
 [go-header]: https://github.com/denis-tingajkin/go-header
-[repo-compare-tag-v0.1.0_v0.1.1]: https://github.com/svengreb/tmpl-go/compare/v0.1.0...v0.1.1
+[gh-compare-tag-v0.1.0_v0.1.1]: https://github.com/svengreb/tmpl-go/compare/v0.1.0...v0.1.1
 [yaml-multiline]: https://yaml-multiline.info
 [yaml-spec-1.2#block_chomping]: https://yaml.org/spec/1.2/spec.html#id2794534
 
 <!-- v0.2.0 -->
 
-[repo-compare-tag-v0.1.1_v0.2.0]: https://github.com/svengreb/tmpl-go/compare/v0.1.1...v0.2.0
+[gh-compare-tag-v0.1.0_v0.2.0]: https://github.com/svengreb/tmpl-go/compare/v0.1.1...v0.2.0
 
 <!-- v0.3.0 -->
 
 [gh-tmpl-rel-v0.4.0]: https://github.com/svengreb/tmpl/releases/tag/v0.4.0
 [go-rln-go-1.15]: https://golang.org/doc/go1.15
-[repo-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl-go/compare/v0.2.0...v0.3.0
+[gh-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl-go/compare/v0.2.0...v0.3.0
 [svengreb/tmpl#46]: https://github.com/svengreb/tmpl/issues/46
 
 <!-- v0.4.0 -->
 
-[errorlint]: https://github.com/polyfloyd/go-errorlint
+[gh-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl-go/compare/v0.3.0...v0.4.0
 [gh-tmpl-rel-v0.5.0]: https://github.com/svengreb/tmpl/releases/tag/v0.5.0
 [golangci-lint-rln-1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
 [npm-tmpl]: https://www.npmjs.com/package/tmpl
-[repo-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl-go/compare/v0.3.0...v0.4.0
 [svengreb/tmpl#48]: https://github.com/svengreb/tmpl/issues/48
 [tparallel]: https://github.com/moricho/tparallel
-[wrapcheck]: https://github.com/tomarrell/wrapcheck
 
 <!-- v0.5.0 -->
 
 [dependabot]: https://dependabot.com
+[gh-compare-tag-v0.4.0_v0.5.0]: https://github.com/svengreb/tmpl-go/compare/v0.4.0...v0.5.0
 [gh-tmpl-rel-v0.6.0]: https://github.com/svengreb/tmpl/releases/tag/v0.6.0
 [gh-tmpl-rel-v0.7.0]: https://github.com/svengreb/tmpl/releases/tag/v0.7.0
 [go-doc-mod]: https://golang.org/ref/mod
 [npm-docs-cli-v7-ws]: https://docs.npmjs.com/cli/v7/using-npm/workspaces
-[repo-compare-tag-v0.4.0_v0.5.0]: https://github.com/svengreb/tmpl-go/compare/v0.4.0...v0.5.0
 [svengreb/tmpl#52]: https://github.com/svengreb/tmpl/issues/52
 [tmpl#cicd]: https://github.com/svengreb/tmpl#cicd-action-workflow
 [tmpl#node]: https://github.com/svengreb/tmpl#nodejs-yarn-and-npm
 [yarn-docs-ws]: https://classic.yarnpkg.com/docs/workspaces
+
+<!-- v0.6.0 -->
+
+[gh-actions/setup-node-comp-v2.1.2_27082cec]: https://github.com/actions/setup-node/compare/v2.1.2...27082cecf3ff7a1742dbd5e12605f0cb59dce2d9
+[gh-actions/setup-node]: https://github.com/actions/setup-node
+[gh-blob-package.json#l24]: https://github.com/svengreb/tmpl-go/blob/main/package.json#L24
+[gh-compare-tag-v0.5.0_v0.6.0]: https://github.com/svengreb/tmpl-go/compare/v0.5.0...v0.6.0
+[gh-docs-repo_vis]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/setting-repository-visibility
+[gh-golangci/golangci-lint-rl-v1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
+[gh-prettier/prettier-comp-v2.1.2_v2.2.1]: https://github.com/prettier/prettier/compare/2.1.2...2.2.1
+[gh-prettier/prettier]: https://github.com/prettier/prettier
+[gh-svengreb/tmpl-rl-v0.8.0]: https://github.com/svengreb/tmpl/releases/tag/v0.8.0
+[gh-svengreb/tmpl#65]: https://github.com/svengreb/tmpl/issues/65
+[gh-tree-app]: https://github.com/svengreb/tmpl-go/tree/main/app
+[gh-tree-web#example]: https://github.com/svengreb/tmpl-go/tree/main/web#example
+[prettier-blog-rl_2.2]: https://prettier.io/blog/2020/11/20/2.2.0.html
+[trunkbasedev-monorepos]: https://trunkbaseddevelopment.com/monorepos
