@@ -6,6 +6,34 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.7.0
+
+![Release Date: 2021-04-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-04-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/8)
+
+⇅ [Show all commits][gh-compare-tag-v0.6.0_v0.7.0]
+
+## Improvements
+
+<details>
+<summary><strong>Updated to Go 1.16</strong> — #54 ⇄ #55 (⊶ 1f20fe12)</summary>
+
+↠ [Go 1.16][go-docs-rln-1.16] is finally released so the Go version used for the `actions/setup-go` action in the `ci` workflow has been updated from `1.15.x` to `1.16.x` and the defined Go version in the `go.mod` file bumped to `go 1.16`.
+
+</details>
+
+## Tasks
+
+<details>
+<summary><strong>Node.js package dependency & GitHub action version updates</strong> — #42, #47</summary>
+
+↠ Bumped outdated Node.js package dependencies and GitHub actions to their latest versions:
+
+- #48, #52 (⊶ e2487f2b, c13b8122) [`actions/setup-node`][gh-actions/setup-node] from [v2.1.3 to v2.1.5][gh-actions/setup-node-comp-v2.1.3_v2.1.5]
+- #49 (⊶ 9250ff93) [`github.com/stretchr/testify`][gh-stretchr/testify] from [v1.6.1 to v1.7.0][gh-stretchr/testify-comp-v1.6.1_v1.7.0]
+- #50, #51, #53 (⊶ bd642b5c, ba39b7e1, f208cdcc) [`golangci/golangci-lint-action`][gh-golangci/golangci-lint-action] from [v2 to v2.5.2][gh-golangci/golangci-lint-action-comp-v2_v2.5.2]
+
+</details>
+
 # 0.6.0
 
 ![Release Date: 2020-12-12](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2020-12-12&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/10) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.6.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/7)
@@ -23,7 +51,7 @@ This also aligns with the [example in the `/web` directory documentation][gh-tre
 </details>
 
 <details>
-<summary><strong>Disabled `errorlint` to prevent false-positive errors</strong> — #39 ⇄ #40 (⊶ 28f888a2)</summary>
+<summary><strong>Disabled <code>errorlint</code> to prevent false-positive errors</strong> — #39 ⇄ #40 (⊶ 28f888a2)</summary>
 
 ↠ In #21 `golangci-lint` was updated to the [currently latest version 1.32.0][gh-golangci/golangci-lint-rl-v1.32.0] which introduced the [errorlint][] that has been enabled for this template repository. As it turns out it causes a lot of false-positives errors for code lines that explicitly do not wrap the error to prevent it become part of the public API.
 Therefore the linter has been disabled again because the update also introduced the new [wrapcheck][] linter which helps to prevent that errors from external packages are exposed to the public API.
@@ -344,3 +372,13 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-tree-web#example]: https://github.com/svengreb/tmpl-go/tree/main/web#example
 [prettier-blog-rl_2.2]: https://prettier.io/blog/2020/11/20/2.2.0.html
 [trunkbasedev-monorepos]: https://trunkbaseddevelopment.com/monorepos
+
+<!-- v0.7.0 -->
+
+[gh-actions/setup-node-comp-v2.1.3_v2.1.5]: https://github.com/actions/setup-node/compare/v2.1.3...v2.1.5
+[gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/svengreb/tmpl-go/compare/v0.6.0...v0.7.0
+[gh-golangci/golangci-lint-action-comp-v2_v2.5.2]: https://github.com/golangci/golangci-lint-action/compare/v2...v2.5.2
+[gh-golangci/golangci-lint-action]: https://github.com/golangci/golangci-lint-action
+[gh-stretchr/testify-comp-v1.6.1_v1.7.0]: https://github.com/stretchr/testify/compare/v1.6.1...v1.7.0
+[gh-stretchr/testify]: https://github.com/stretchr/testify
+[go-docs-rln-1.16]: https://golang.org/doc/go1.16
