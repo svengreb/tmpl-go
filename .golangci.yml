@@ -33,6 +33,7 @@ linters:
     - dupl
     - errcheck
     - exhaustive
+    - exportloopref
     - gochecknoinits
     - goconst
     - gocritic
@@ -49,13 +50,11 @@ linters:
     - gosimple
     - govet
     - ineffassign
-    - interfacer
     - lll
     - misspell
     - nakedret
     - noctx
     - nolintlint
-    - scopelint
     - staticcheck
     - structcheck
     - stylecheck
@@ -147,4 +146,4 @@ run:
   deadline: 15m
 
 service:
-  golangci-lint-version: 1.32.x
+  golangci-lint-version: 1.39.x
