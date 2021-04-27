@@ -130,7 +130,7 @@ This version also updated to the latest Node.js package dependency & GitHub Acti
 <details>
 <summary><strong>Update to golangci-lint version 1.32.0</strong> — #20 ⇄ #21 (⊶ 072aad99)</summary>
 
-↠ The currently latest [`golangci-lint` version 1.32.0][golangci-lint-rln-1.32.0] introduced new linters that have been configured for this template repository:
+↠ The currently latest [`golangci-lint` version 1.32.0][gh-golangci/golangci-lint-rl-v1.32.0] introduced new linters that have been configured for this template repository:
 
 1. [wrapcheck][] — Checks that errors returned from external packages are wrapped.
    This linter is **disabled by default**, but has been **enabled** for this template repository to help tp reduce error context loss.
@@ -171,8 +171,8 @@ This also comes with the benefit of providing a simple starting point for users 
 
 ↠ Before the CI workflow used a matrix strategy to run the `lint-go` and `test` jobs, but this has been improved to make the workflow run faster by avoiding unnecessary steps:
 
-- The `lint-go` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-go-1.15] only on _Linux_ because `golangci-lint` doesn't care about the _Go_ version and OS it runs on but only statically checks the source code.
-- The `test` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-go-1.15].
+- The `lint-go` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-1.15.0] only on _Linux_ because `golangci-lint` doesn't care about the _Go_ version and OS it runs on but only statically checks the source code.
+- The `test` job has been changed to only run on the [currently latest stable Go version `1.15.x`][go-rln-1.15.0].
 
 These changes help to keep the required GitHub Action run minutes for the account of this repository as small as possible without wasting resources for unnecessary tasks.
 
@@ -274,7 +274,7 @@ Additionally specific assets like the repository hero image were also added.
 ↠ To ensure a good code quality the Go ecosystem has hundreds of linters, each with a different purpose. Instead of installing and running multiple linters separately [golangci-lint][] provides a uniform interface to run most popular and useful linters in parallel and with many additional configuration features.
 The actual runner is open source and can be used locally as well in any private CI/CD pipeline. In order to use it for tmpl-go, a `.golangci.yml` configuration file has been added.
 
-The runner is used in the [the existing _CI_ GitHub action workflow][repo-action-query-ci] through the [golangci-lint-action][] GitHub action that has been created by the golangci-lint maintainers.
+The runner is used in the [the existing _CI_ GitHub action workflow][repo-action-query-ci] through the [gh-golangci/golangci-lint-action][] GitHub action that has been created by the golangci-lint maintainers.
 
 </details>
 
@@ -300,19 +300,21 @@ otherwise Markdown elements are not parsed and rendered!
 
 <!-- Base Links -->
 
+[errorlint]: https://github.com/polyfloyd/go-errorlint
+[gh-golangci/golangci-lint-action]: https://github.com/golangci/golangci-lint-action
+[gh-tmpl]: https://github.com/svengreb/tmpl
+[golangci-lint]: https://golangci-lint.run
+[wrapcheck]: https://github.com/tomarrell/wrapcheck
+
 <!-- Shared Links -->
 
-[errorlint]: https://github.com/polyfloyd/go-errorlint
-[gh-tmpl]: https://github.com/svengreb/tmpl
-[golangci-lint]: https://github.com/golangci/golangci-lint
-[wrapcheck]: https://github.com/tomarrell/wrapcheck
+[gh-golangci/golangci-lint-rl-v1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
+[go-rln-1.15.0]: https://golang.org/doc/go1.15
 
 <!-- v0.1.0 -->
 
 [gh-go-wiki-modules]: https://github.com/golang/go/wiki/Modules
 [gh-tmpl-release-v0.3.0]: https://github.com/svengreb/tmpl/releases/tag/v0.3.0
-[go-rln-1.15.0]: https://golang.org/doc/go1.15
-[golangci-lint-action]: https://github.com/golangci/golangci-lint-action
 [repo-action-query-ci]: https://github.com/svengreb/tmpl-go/actions?query=workflow%3ACI
 [gh-compare-tag-init_v0.1.0]: https://github.com/svengreb/tmpl-go/compare/87400d37...v0.1.0
 
@@ -330,7 +332,6 @@ otherwise Markdown elements are not parsed and rendered!
 <!-- v0.3.0 -->
 
 [gh-tmpl-rel-v0.4.0]: https://github.com/svengreb/tmpl/releases/tag/v0.4.0
-[go-rln-go-1.15]: https://golang.org/doc/go1.15
 [gh-compare-tag-v0.2.0_v0.3.0]: https://github.com/svengreb/tmpl-go/compare/v0.2.0...v0.3.0
 [svengreb/tmpl#46]: https://github.com/svengreb/tmpl/issues/46
 
@@ -338,7 +339,6 @@ otherwise Markdown elements are not parsed and rendered!
 
 [gh-compare-tag-v0.3.0_v0.4.0]: https://github.com/svengreb/tmpl-go/compare/v0.3.0...v0.4.0
 [gh-tmpl-rel-v0.5.0]: https://github.com/svengreb/tmpl/releases/tag/v0.5.0
-[golangci-lint-rln-1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
 [npm-tmpl]: https://www.npmjs.com/package/tmpl
 [svengreb/tmpl#48]: https://github.com/svengreb/tmpl/issues/48
 [tparallel]: https://github.com/moricho/tparallel
@@ -363,7 +363,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-blob-package.json#l24]: https://github.com/svengreb/tmpl-go/blob/main/package.json#L24
 [gh-compare-tag-v0.5.0_v0.6.0]: https://github.com/svengreb/tmpl-go/compare/v0.5.0...v0.6.0
 [gh-docs-repo_vis]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/setting-repository-visibility
-[gh-golangci/golangci-lint-rl-v1.32.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
 [gh-prettier/prettier-comp-v2.1.2_v2.2.1]: https://github.com/prettier/prettier/compare/2.1.2...2.2.1
 [gh-prettier/prettier]: https://github.com/prettier/prettier
 [gh-svengreb/tmpl-rl-v0.8.0]: https://github.com/svengreb/tmpl/releases/tag/v0.8.0
@@ -378,7 +377,6 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-actions/setup-node-comp-v2.1.3_v2.1.5]: https://github.com/actions/setup-node/compare/v2.1.3...v2.1.5
 [gh-compare-tag-v0.6.0_v0.7.0]: https://github.com/svengreb/tmpl-go/compare/v0.6.0...v0.7.0
 [gh-golangci/golangci-lint-action-comp-v2_v2.5.2]: https://github.com/golangci/golangci-lint-action/compare/v2...v2.5.2
-[gh-golangci/golangci-lint-action]: https://github.com/golangci/golangci-lint-action
 [gh-stretchr/testify-comp-v1.6.1_v1.7.0]: https://github.com/stretchr/testify/compare/v1.6.1...v1.7.0
 [gh-stretchr/testify]: https://github.com/stretchr/testify
 [go-docs-rln-1.16]: https://golang.org/doc/go1.16
