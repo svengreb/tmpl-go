@@ -125,7 +125,7 @@ linters-settings:
     settings:
       mnd:
         # The list of enabled checks.
-        # See ttps://github.com/tommy-muehle/go-mnd/#checks for more details.
+        # See https://github.com/tommy-muehle/go-mnd/#checks for more details.
         checks: argument,assign,case,condition,operation,return
 
   govet:

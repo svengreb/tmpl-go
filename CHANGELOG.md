@@ -6,6 +6,34 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.8.0
+
+![Release Date: 2021-04-27](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-04-27&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/12) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/9)
+
+⇅ [Show all commits][gh-compare-tag-v0.7.0_v0.8.0]
+
+## Improvements
+
+<details>
+<summary><strong>Update to golangci-lint <code>`v1.39.x<code></strong> — #56 ⇄ #57 (⊶ 3e60efbc)</summary>
+
+↠ [`golangci-lint` version 1.39.0][gh-golangci/golangci-lint-rln-v1.39.0] introduced new linters and updated supported ones:
+
+1. [predeclared][gh-nishanths/predeclared] ([v1.35.0][gh-golangci/golangci-lint-rln-v1.35.0]) — Checks for definitions and declarations that shadows one of [Go's pre-declared identifiers][go-docs-spec#predeclared_identifiers].
+   This linter is **disabled by default**, but will be **enabled** for this template to help to prevent shadowed identifiers.
+2. [interfacer][gh-mvdan/interfacer] ([v1.38.0][gh-golangci/golangci-lint-rln-v1.38.0]) — [Has been deprecated][gh-golangci/golangci-lint#1755] and will be removed from the enabled linter in this template.
+3. [scopelint][gh-kyoh86/scopelint] ([v1.39.0][gh-golangci/golangci-lint-rln-v1.39.0]) — [Has been deprecated][gh-golangci/golangci-lint#1819] and will be replaced by [exportloopref][gh-kyoh86/exportloopref].
+   The `exportloopref` linter is **disabled by default**, but will be **enabled** for this template to help to catch loop variable bugs.
+
+</details>
+
+<details>
+<summary><strong>Update to <code>tmpl</code> template repository version <code>0.9.0</code></strong> — #58 ⇄ #59 (⊶ 5f0b1cf0)</summary>
+
+↠ Updated to [`tmpl` version `0.9.0`][gh-svengreb/tmpl-rl-v0.9.0] which [moves from Yarn back to npm again][gh-svengreb/tmpl#72], [improves and clarifies the handling of lockfiles][gh-svengreb/tmpl#70] and comes with some major Node package dependency & GitHub action version updates.
+
+</details>
+
 # 0.7.0
 
 ![Release Date: 2021-04-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-04-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/11) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.7.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/8)
@@ -380,3 +408,20 @@ otherwise Markdown elements are not parsed and rendered!
 [gh-stretchr/testify-comp-v1.6.1_v1.7.0]: https://github.com/stretchr/testify/compare/v1.6.1...v1.7.0
 [gh-stretchr/testify]: https://github.com/stretchr/testify
 [go-docs-rln-1.16]: https://golang.org/doc/go1.16
+
+<!-- v0.8.0 -->
+
+[gh-compare-tag-v0.7.0_v0.8.0]: https://github.com/svengreb/tmpl-go/compare/v0.7.0...v0.8.0
+[gh-golangci/golangci-lint-rln-v1.35.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.35.0
+[gh-golangci/golangci-lint-rln-v1.38.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.38.0
+[gh-golangci/golangci-lint-rln-v1.39.0]: https://github.com/golangci/golangci-lint/releases/tag/v1.39.0
+[gh-golangci/golangci-lint#1755]: https://github.com/golangci/golangci-lint/pull/1755
+[gh-golangci/golangci-lint#1819]: https://github.com/golangci/golangci-lint/pull/1819
+[gh-kyoh86/exportloopref]: https://github.com/kyoh86/exportloopref
+[gh-kyoh86/scopelint]: https://github.com/kyoh86/scopelint
+[gh-mvdan/interfacer]: https://github.com/mvdan/interfacer
+[gh-nishanths/predeclared]: https://github.com/nishanths/predeclared
+[gh-svengreb/tmpl-rl-v0.9.0]: https://github.com/svengreb/tmpl/releases/tag/v0.9.0
+[gh-svengreb/tmpl#70]: https://github.com/svengreb/tmpl/issues/70
+[gh-svengreb/tmpl#72]: https://github.com/svengreb/tmpl/issues/72
+[go-docs-spec#predeclared_identifiers]: https://golang.org/ref/spec#Predeclared_identifiers
