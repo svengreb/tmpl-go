@@ -17,7 +17,7 @@ Please note that _tmpl-go_ has mainly been created for my personal use in mind. 
 ## Overview
 
 This repository serves as a template for [Go][] projects including basic tools and configurations with sane default values.
-It is built on top of the [base _tmpl_ repository][tmpl] which provides essential features for all kind of projects. Please see the [_tmpl_ project overview documentation][tmpl-readme#overview] for more details.
+It is built on top of the [base _tmpl_ repository][tmpl] which provides essential features for all kind of projects. Please see the [_tmpl_ project overview documentation][gh-tmpl#overview] for more details.
 
 - [Build on top of the base _tmpl_ template repository][tmpl] that provides essential features for any project
 - Extended configurations for [GitHub specific features](#github) that are already provided in the base _tmpl_ template repository:
@@ -80,7 +80,7 @@ This template repository has partially been designed for repositories hosted on 
 
 #### CI/CD Action Workflow
 
-The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. The `lint-node` job is [derived from the _tmpl_ template repository][gh-tmpl#gh_act_cicd] and runs all [Node.js based linters][gh-tmpl#ov] that are also included in this template repository. The `lint-go` job runs all [configured `golangci-lint` linters](#go-code-quality-linting) while the `test` job runs all [tests with coverage report][go-doc-cmd-cover] and enabled [race detector][go-doc-race_detector].
+The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. The `lint-node` job is [derived from the _tmpl_ template repository][gh-tmpl#gh_act_cicd] and runs all [Node.js based linters][gh-tmpl#overview] that are also included in this template repository. The `lint-go` job runs all [configured `golangci-lint` linters](#go-code-quality-linting) while the `test` job runs all [tests with coverage report][go-doc-cmd-cover] and enabled [race detector][go-doc-race_detector].
 
 #### Automated Dependency Updates
 
@@ -171,7 +171,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-features]: https://github.com/features
 [gh-tmpl#autp_dep_updates]: https://github.com/svengreb/tmpl#automated-dependency-updates
 [gh-tmpl#gh_act_cicd]: https://github.com/svengreb/tmpl#cicd-action-workflow
-[gh-tmpl#ov]: https://github.com/svengreb/tmpl#overview
+[gh-tmpl#overview]: https://github.com/svengreb/tmpl#overview
 [gh-tmpl#usage]: https://github.com/svengreb/tmpl#usage
 [gh-tree-api]: https://github.com/svengreb/tmpl-go/tree/main/api
 [gh-tree-apps]: https://github.com/svengreb/tmpl-go/tree/main/apps
@@ -202,7 +202,6 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [protobuf]: https://developers.google.com/protocol-buffers
 [swagger]: https://swagger.io
 [tmpl-readme#dir_struct]: https://github.com/svengreb/tmpl#directory-structure
-[tmpl-readme#overview]: https://github.com/svengreb/tmpl#overview
 [tmpl]: https://github.com/svengreb/tmpl
 [trunkbasedev-monorepos]: https://trunkbaseddevelopment.com/monorepos
 [wikip-runbook]: https://en.wikipedia.org/wiki/Runbook
