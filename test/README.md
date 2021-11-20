@@ -4,7 +4,7 @@ Additional external test applications and test data. Feel free to structure the 
 
 ## Directory Structure
 
-The layout always depends on the individual use case(s) of the project, but there are resources like the official documentations of the [`go test` command][go-doc-cmd-test], which includes information about directories named `testdata`, and about [package lists and patterns][go-doc-cmd-go#pkg_list_pattern].
+The layout always depends on the individual use case(s) of the project, but there are resources like the official documentations of the [`go test` command][10], which includes information about directories named `testdata`, and about [package lists and patterns][9].
 
 ## Example
 
@@ -33,26 +33,26 @@ test
 
 ## References
 
-Next to the experience with own projects and [golang-standards/project-layout][], many other large, production-grade and well-known projects of the Go ecosystem have been used as references:
+Next to the experience with own projects and [golang-standards/project-layout][1], many other large, production-grade and well-known projects of the Go ecosystem have been used as references:
 
-- [Knative][gh-knative-tree-test]
-- [Kubernetes][gh-kubernetes-tree-test]
-- [etcd][gh-etcd-tree-tests]
-- [Argo][gh-argo-tree-test]
-- [Helm][gh-helm-tree-testdata]
-- [GoPass][gh-gopass-tree-tests]
+- [Knative][7]
+- [Kubernetes][8]
+- [etcd][4]
+- [Argo][3]
+- [Helm][6]
+- [GoPass][5]
 
 Blog posts, videos and documentations:
 
-- [Blog Post: “Test fixtures in Go“][bp-davecheney-test_fixtures]
+- [Blog Post: “Test fixtures in Go“][2]
 
-[bp-davecheney-test_fixtures]: https://dave.cheney.net/2016/05/10/test-fixtures-in-go
-[gh-argo-tree-test]: https://github.com/argoproj/argo/tree/master/test
-[gh-etcd-tree-tests]: https://github.com/etcd-io/etcd/tree/master/tests
-[gh-gopass-tree-tests]: https://github.com/gopasspw/gopass/tree/master/tests
-[gh-helm-tree-testdata]: https://github.com/helm/helm/tree/master/testdata
-[gh-knative-tree-test]: https://github.com/knative/serving/tree/master/test
-[gh-kubernetes-tree-test]: https://github.com/kubernetes/kubernetes/tree/master/test
-[go-doc-cmd-go#pkg_list_pattern]: https://golang.org/cmd/go/#hdr-Package_lists_and_patterns
-[go-doc-cmd-test]: https://golang.org/pkg/cmd/go/internal/test
-[golang-standards/project-layout]: https://github.com/golang-standards/project-layout
+[1]: https://github.com/golang-standards/project-layout
+[2]: https://dave.cheney.net/2016/05/10/test-fixtures-in-go
+[3]: https://github.com/argoproj/argo/tree/master/test
+[4]: https://github.com/etcd-io/etcd/tree/master/tests
+[5]: https://github.com/gopasspw/gopass/tree/master/tests
+[6]: https://github.com/helm/helm/tree/master/testdata
+[7]: https://github.com/knative/serving/tree/master/test
+[8]: https://github.com/kubernetes/kubernetes/tree/master/test
+[9]: https://golang.org/cmd/go/#hdr-Package_lists_and_patterns
+[10]: https://golang.org/pkg/cmd/go/internal/test

@@ -1,4 +1,4 @@
-The `/examples` directory stores examples for provided APIs that are defined in the [`/api` directory][gh-tree-api], public packages from the [`/pkg` directory][gh-tree-pkg], ways to use and run applications from the [`/apps` directory][gh-tree-apps] or to demonstrate the integration with other applications, platforms or systems.
+The `/examples` directory stores examples for provided APIs that are defined in the [`/api` directory][4], public packages from the [`/pkg` directory][6], ways to use and run applications from the [`/apps` directory][5] or to demonstrate the integration with other applications, platforms or systems.
 
 ## Directory Structure
 
@@ -6,7 +6,7 @@ A common practice is that each example is placed in an individual directory whos
 
 ## Example
 
-Given the API defined in the [example of the `/api` directory][gh-blob-api-readme#example] the structure could be created as follows:
+Given the API defined in the [example of the `/api` directory][2] the structure could be created as follows:
 
 ```raw
 examples
@@ -16,15 +16,15 @@ examples
 
 ## References
 
-Next to the experience with own projects and [golang-standards/project-layout][], many other large, production-grade and well-known projects of the Go ecosystem have been used as references:
+Next to the experience with own projects and [golang-standards/project-layout][1], many other large, production-grade and well-known projects of the Go ecosystem have been used as references:
 
-- [NATS][gh-nats-tree-examples]
-- [Velero][gh-velero-tree-examples]
+- [NATS][3]
+- [Velero][7]
 
-[gh-blob-api-readme#example]: https://github.com/svengreb/tmpl-go/blob/main/api/README.md#example
-[gh-nats-tree-examples]: https://github.com/nats-io/nats.go/tree/master/examples
-[gh-tree-api]: https://github.com/svengreb/tmpl-go/tree/main/api
-[gh-tree-apps]: https://github.com/svengreb/tmpl-go/tree/main/apps
-[gh-tree-pkg]: https://github.com/svengreb/tmpl-go/tree/main/pkg
-[gh-velero-tree-examples]: https://github.com/vmware-tanzu/velero/tree/main/examples
-[golang-standards/project-layout]: https://github.com/golang-standards/project-layout
+[1]: https://github.com/golang-standards/project-layout
+[2]: https://github.com/svengreb/tmpl-go/blob/main/api/README.md#example
+[3]: https://github.com/nats-io/nats.go/tree/master/examples
+[4]: https://github.com/svengreb/tmpl-go/tree/main/api
+[5]: https://github.com/svengreb/tmpl-go/tree/main/apps
+[6]: https://github.com/svengreb/tmpl-go/tree/main/pkg
+[7]: https://github.com/vmware-tanzu/velero/tree/main/examples
