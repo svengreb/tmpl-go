@@ -125,13 +125,9 @@ A style guide establishes and enforces style to improve the intelligibility and 
 
 tmpl-go adheres to the [Arctic Ice Studio JavaScript Style Guide][gh-styleguide-javascript].
 
-[![][gh-styleguide-javascript-badge]][gh-styleguide-javascript]
-
 ### Markdown Style Guide
 
 tmpl-go adheres to the [Arctic Ice Studio Markdown Style Guide][gh-styleguide-markdown].
-
-[![][gh-styleguide-markdown-badge]][gh-styleguide-markdown]
 
 ### Git Commit Messages
 
@@ -203,9 +199,7 @@ Thanks for the inspirations and attributions to GitHub's [Open Source Guides][os
 [gh-profile-repo-search]: https://github.com/svengreb?&tab=repositories&q=tmpl
 [gh-releases-latest]: https://github.com/svengreb/tmpl-go/releases/latest
 [gh-styleguide-git]: https://github.com/arcticicestudio/styleguide-git
-[gh-styleguide-javascript-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-javascript/develop/assets/styleguide-javascript-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-javascript]: https://github.com/arcticicestudio/styleguide-javascript
-[gh-styleguide-markdown-badge]: https://raw.githubusercontent.com/arcticicestudio/styleguide-markdown/develop/assets/styleguide-markdown-banner-typography-badge.svg?sanitize=true
 [gh-styleguide-markdown]: https://github.com/arcticicestudio/styleguide-markdown
 [gh-tmpl]: https://github.com/svengreb/tmpl
 [ghd-attach-file]: https://docs.github.com/en/github/managing-your-work-on-github/file-attachments-on-issues-and-pull-requests

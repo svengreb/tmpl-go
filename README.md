@@ -81,6 +81,7 @@ This template repository has partially been designed for repositories hosted on 
 #### CI/CD Action Workflows
 
 The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow files][gh-docs-act-ref-syntax] that run for changes in the Git `main` branch and `v*` tags. The `lint-node` job is [derived from the _tmpl_ template repository][gh-tmpl#gh_act_cicd] and runs all [Node.js based linters][gh-tmpl#overview] that are also included in this template repository. The `ci-go` workflow runs all [configured `golangci-lint` linters](#go-code-quality-linting) and the `test` job runs all [tests with coverage report][go-doc-cmd-cover] and enabled [race detector][go-doc-race_detector].
+To skip a workflow, include a [supported keyword like `[skip actions]`][gh-blog-cl-skip_actions] in a commit message.
 
 #### Automated Dependency Updates
 
@@ -163,6 +164,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [gh-blob-tmpl-go_test.go]: https://github.com/svengreb/tmpl-go/blob/main/tmpl-go_test.go
 [gh-blob-tmpl-go.go]: https://github.com/svengreb/tmpl-go/blob/main/tmpl-go.go
 [gh-blob-web-readme]: https://github.com/svengreb/tmpl-go/blob/main/web/README.md
+[gh-blog-cl-skip_actions]: https://github.blog/changelog/2021-02-08-github-actions-skip-pull-request-and-push-workflows-with-skip-ci
 [gh-docs-act-ref-syntax]: https://docs.github.com/en/free-pro-team@latest/actions/reference/workflow-syntax-for-github-actions
 [gh-docs-dependabot]: https://docs.github.com/en/free-pro-team@latest/github/administering-a-repository/configuration-options-for-dependency-updates
 [gh-docs-repo_clone]: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
