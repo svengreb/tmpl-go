@@ -2,7 +2,7 @@
 
 <p align="center"><a href="https://github.com/svengreb/tmpl-go/releases/latest"><img src="https://img.shields.io/github/release/svengreb/tmpl-go.svg?style=flat-square&label=Release&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://github.com/svengreb/tmpl-go/blob/main/CHANGELOG.md"><img src="https://img.shields.io/github/release/svengreb/tmpl-go.svg?style=flat-square&label=Changelog&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a></p>
 
-<p align="center"><a href="https://github.com/svengreb/tmpl-go/actions?query=workflow%3Aci" target="_blank"><img src="https://img.shields.io/github/workflow/status/svengreb/tmpl-go/ci.svg?style=flat-square&label=CI&logo=github&logoColor=eceff4&colorA=4c566a"/></a></p>
+<p align="center"><a href="https://github.com/svengreb/tmpl-go/actions?query=workflow%3Aci-go" target="_blank"><img src="https://img.shields.io/github/workflow/status/svengreb/tmpl-go/ci-go.svg?style=flat-square&label=CI%20Go&logo=github&logoColor=eceff4&colorA=4c566a"/></a> <a href="https://github.com/svengreb/tmpl-go/actions?query=workflow%3Aci-node" target="_blank"><img src="https://img.shields.io/github/workflow/status/svengreb/tmpl-go/ci-node.svg?style=flat-square&label=CI%20Node&logo=github&logoColor=eceff4&colorA=4c566a"/></a></p>
 
 <p align="center"><a href="https://golang.org/doc/effective_go.html#formatting" target="_blank"><img src="https://img.shields.io/static/v1?style=flat-square&label=Go%20Style%20Guide&message=gofmt&logo=go&logoColor=eceff4&colorA=4c566a&colorB=88c0d0"/></a> <a href="https://github.com/arcticicestudio/styleguide-markdown/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-markdown.svg?style=flat-square&label=Markdown%20Style%20Guide&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzOSIgaGVpZ2h0PSIzOSIgdmlld0JveD0iMCAwIDM5IDM5Ij48cGF0aCBmaWxsPSJub25lIiBzdHJva2U9IiNEOERFRTkiIHN0cm9rZS13aWR0aD0iMyIgc3Ryb2tlLW1pdGVybGltaXQ9IjEwIiBkPSJNMS41IDEuNWgzNnYzNmgtMzZ6Ii8%2BPHBhdGggZmlsbD0iI0Q4REVFOSIgZD0iTTIwLjY4MyAyNS42NTVsNS44NzItMTMuNDhoLjU2Nmw1Ljg3MyAxMy40OGgtMS45OTZsLTQuMTU5LTEwLjA1Ni00LjE2MSAxMC4wNTZoLTEuOTk1em0tMi42OTYgMGwtMTMuNDgtNS44NzJ2LS41NjZsMTMuNDgtNS44NzJ2MS45OTVMNy45MzEgMTkuNWwxMC4wNTYgNC4xNnoiLz48L3N2Zz4%3D"/></a> <a href="https://github.com/arcticicestudio/styleguide-git/releases/latest" target="_blank"><img src="https://img.shields.io/github/release/arcticicestudio/styleguide-git.svg?style=flat-square&label=Git%20Style%20Guide&logoColor=eceff4&colorA=4c566a&colorB=88c0d0&logo=git"/></a></p>
 
@@ -21,7 +21,7 @@ It is built on top of the [base _tmpl_ repository][tmpl] which provides essentia
 
 - [Build on top of the base _tmpl_ template repository][tmpl] that provides essential features for any project
 - Extended configurations for [GitHub specific features](#github) that are already provided in the base _tmpl_ template repository:
-  - [CI/CD action workflow](#cicd-action-workflow) for Go specific tasks
+  - [CI/CD action workflows](#cicd-action-workflows) for Go specific tasks
   - [Automated updates and security vulnerability alerts](#automated-dependency-updates) for [Go Module][go-doc-mod] and [Yarn][]/[NPM][] dependencies through the native [Dependabot][] integration
 - [Go Module](#go-module) to ensure a stable dependency management
 - [golangci-lint][] to [check the Go code quality](#go-code-quality-linting)
@@ -78,9 +78,9 @@ The sections below contain more detailed information about each feature, the san
 
 This template repository has partially been designed for repositories hosted on GitHub and makes use of many of [its fantastic features][gh-features].
 
-#### CI/CD Action Workflow
+#### CI/CD Action Workflows
 
-The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow file][gh-docs-act-ref-syntax] that runs for changes in the Git `main` branch and `v*` tags. The `lint-node` job is [derived from the _tmpl_ template repository][gh-tmpl#gh_act_cicd] and runs all [Node.js based linters][gh-tmpl#overview] that are also included in this template repository. The `lint-go` job runs all [configured `golangci-lint` linters](#go-code-quality-linting) while the `test` job runs all [tests with coverage report][go-doc-cmd-cover] and enabled [race detector][go-doc-race_detector].
+The [GitHub Actions][gh-feat-actions] `.github/workflows` directory includes a basic [CI/CD workflow files][gh-docs-act-ref-syntax] that run for changes in the Git `main` branch and `v*` tags. The `lint-node` job is [derived from the _tmpl_ template repository][gh-tmpl#gh_act_cicd] and runs all [Node.js based linters][gh-tmpl#overview] that are also included in this template repository. The `ci-go` workflow runs all [configured `golangci-lint` linters](#go-code-quality-linting) and the `test` job runs all [tests with coverage report][go-doc-cmd-cover] and enabled [race detector][go-doc-race_detector].
 
 #### Automated Dependency Updates
 
@@ -98,7 +98,7 @@ To ensure a good code quality the Go ecosystem has hundreds of linters, each wit
 The actual runner is open source and can be used locally as well in any private CI/CD pipeline.
 The [`.golangci.yml` configuration file][gh-blob-dot_golangci] is located in the root of this template repository and comes with sane default configurations that can be simply adjusted and extended.
 
-The runner is also used in the [the existing _CI_ GitHub action workflow][gh-act-ci] through the [golangci-lint-action][] GitHub action that has been created by the golangci-lint maintainers. See the [“CI/CD Action Workflow“](#cicd-action-workflow) section for more details.
+The runner is also used in the [the existing _CI_ GitHub action workflows][gh-act-ci] through the [golangci-lint-action][] GitHub action that has been created by the golangci-lint maintainers. See the [“CI/CD Action Workflows“](#cicd-action-workflows) section for more details.
 
 ## Usage
 
