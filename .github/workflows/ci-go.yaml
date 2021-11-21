@@ -56,3 +56,23 @@ jobs:
           go-version: "1.17.x"
       - name: Run tests with coverage and race detector
         run: go test -cover -race -v ./...
+
+  post-tasks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print metadata and context information
+        run: |
+          echo "Git SHA: $GITHUB_SHA"
+          echo "Git Ref: $GITHUB_REF"
+          echo "Workflow Actor: $GITHUB_ACTOR"
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Cache Go dependencies and build outputs
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/go-build
+            ~/go/pkg/mod
+          key: ${{ runner.os }}-go-${{ hashFiles('**/go.sum') }}
+          restore-keys: |
+            ${{ runner.os }}-go-
