@@ -6,6 +6,29 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.10.0
+
+![Release Date: 2021-11-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-11-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/14) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/11)
+
+⇅ [Show all commits][105]
+
+## Improvements
+
+<details>
+<summary><strong>Disable <code>golangci-lint</code>'s default excluded issues</code></strong> — #72 ⇄ #73 (⊶ c099c6ee)</summary>
+
+↠ By default [golangci-lint][3] [excludes specific issues][107] (matches) that are known to be "annoying", but this also includes issues explicitly enabled by this template, e.g. the [revive][87] rule to [check that exported function and methods always have a comment][109].
+To prevent these issues to be found the default excludes will be disables through the `issues.exclude-use-default` configuration field.
+
+</details>
+
+<details>
+<summary><strong>Cache Go dependencies and build outputs in <code>ci-go</code> workflow</code></strong> — #74 ⇄ #75 (⊶ 05c0d385)</summary>
+
+↠ To improve workflow execution time for the [`ci-go` workflow][110] the [`actions/cache`][111] GitHub action is now used to cache Go dependencies and build outputs. Also see the detailed [documentation about “Caching dependencies to speed up workflows“][112] to learn more about the way `action/cache` works.
+
+</details>
+
 # 0.9.0
 
 ![Release Date: 2021-11-20](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-11-20&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.9.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/13) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/10)
@@ -385,6 +408,10 @@ The runner is used in the [the existing _CI_ GitHub action workflow][13] through
 
 </details>
 
+<p align="center">Copyright &copy; 2020-present <a href="https://www.svengreb.de" target="_blank" rel="noreferrer">Sven Greb</a></p>
+
+<p align="center"><a href="https://github.com/svengreb/tmpl-go/blob/main/LICENSE" target="_blank" rel="noreferrer"><img src="https://img.shields.io/static/v1.svg?style=flat-square&label=License&message=MIT&logoColor=eceff4&logo=github&colorA=4c566a&colorB=88c0d0"/></a></p>
+
 <!--
 +------------------+
 + Formatting Notes +
@@ -417,6 +444,7 @@ otherwise Markdown elements are not parsed and rendered!
 
 [9]: https://github.com/golangci/golangci-lint/releases/tag/v1.32.0
 [10]: https://golang.org/doc/go1.15
+[87]: https://github.com/mgechev/revive
 
 <!-- v0.1.0 -->
 
@@ -524,7 +552,6 @@ otherwise Markdown elements are not parsed and rendered!
 [84]: https://github.com/walle/lll
 [85]: https://github.com/daixiang0/gci
 [86]: https://golangci-lint.run/usage/linters/#gci
-[87]: https://github.com/mgechev/revive
 [88]: https://github.com/svengreb/tmpl-go/blob/97fdc142/go.mod
 [89]: https://golang.org/doc/go1.17
 [90]: https://github.com/svengreb/tmpl-go/blob/c20ba3bd/.github/workflows/ci.yml
@@ -542,3 +569,12 @@ otherwise Markdown elements are not parsed and rendered!
 [102]: https://github.com/svengreb/tmpl/issues/86
 [103]: https://github.com/svengreb/tmpl/issues/76
 [104]: https://github.com/svengreb/tmpl-go/compare/v0.8.0...v0.9.0
+
+<!-- v0.10.0 -->
+
+[105]: https://github.com/svengreb/tmpl-go/compare/v0.9.0...v0.10.0
+[107]: https://golangci-lint.run/usage/configuration/#config-file
+[109]: https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#exported
+[110]: https://github.com/svengreb/tmpl-go/blob/c099c6ee246eb402b63f7a605ca647c481a02eab/.github/workflows/ci-go.yaml
+[111]: https://github.com/actions/cache
+[112]: https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows
