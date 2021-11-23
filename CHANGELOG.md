@@ -6,6 +6,31 @@
 
 <!--lint disable no-duplicate-headings no-duplicate-headings-in-section-->
 
+# 0.11.0
+
+![Release Date: 2021-11-23](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-11-23&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.11.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/15) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/12)
+
+⇅ [Show all commits][113]
+
+## Improvements
+
+<details>
+<summary><strong>Disable revive linter rule <code>package-comments</code></strong> — #78 ⇄ #79 (⊶ 918ba3c8)</summary>
+
+↠ Even though the [`package-comments` rule][117] of the [`revive` linter][87] is quite useful, it produces false-positive errors when another file already has a package documentation. Duplicating documentation is not a workaround so the rule has been disabled for now and might be re-enabled if the rule logic gets updated.
+
+</details>
+
+## Bug Fixes
+
+<details>
+<summary><strong><code>golangci-lint</code> fails to run due to <code>revive</code>s unknown <code>time-equal</code> rule</strong> — #76 ⇄ #77 (⊶ ab326723)</summary>
+
+↠ The [`time-equal` rule][115] was added in #64, but the [`revive` linter][87] used by `golangci-lint` does not yet include the rule in the [current release version][114] but only merged it into the `main` branch. Therefore linting failed because the rule is not known (yet) and `golangci-lint` exits before running any linter.
+To fix the problem the `time-equal` rule has been disabled again for now and will be enabled again when it is available in a new `revive` version that is used by `golangci-lint`.
+
+</details>
+
 # 0.10.0
 
 ![Release Date: 2021-11-21](https://img.shields.io/static/v1?style=flat-square&label=Release%20Date&message=2021-11-21&colorA=4c566a&colorB=88c0d0) [![Project Board](https://img.shields.io/static/v1?style=flat-square&label=Project%20Board&message=0.10.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/projects/14) [![Milestone](https://img.shields.io/static/v1?style=flat-square&label=Milestone&message=0.8.0&logo=github&logoColor=eceff4&colorA=4c566a&colorB=88c0d0)](https://github.com/svengreb/tmpl-go/milestone/11)
@@ -578,3 +603,10 @@ otherwise Markdown elements are not parsed and rendered!
 [110]: https://github.com/svengreb/tmpl-go/blob/c099c6ee246eb402b63f7a605ca647c481a02eab/.github/workflows/ci-go.yaml
 [111]: https://github.com/actions/cache
 [112]: https://docs.github.com/en/actions/advanced-guides/caching-dependencies-to-speed-up-workflows
+
+<!-- v0.11.0 -->
+
+[113]: https://github.com/svengreb/tmpl-go/compare/v0.10.0...v0.11.0
+[114]: https://github.com/mgechev/revive/releases/tag/v1.1.2
+[115]: https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#time-equal
+[117]: https://github.com/mgechev/revive/blob/master/RULES_DESCRIPTIONS.md#package-comments
