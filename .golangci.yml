@@ -198,7 +198,6 @@ linters-settings:
       - name: string-of-int
         severity: error
       - name: superfluous-else
-      - name: time-equal
       - name: time-naming
       - name: unconditional-recursion
       - name: unexported-naming
