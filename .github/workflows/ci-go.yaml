@@ -29,7 +29,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install Go 1.17
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: "1.17.x"
       - name: "Run golangci-lint"
@@ -51,7 +51,7 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v2
       - name: Install Go 1.17
-        uses: actions/setup-go@v2
+        uses: actions/setup-go@v3
         with:
           go-version: "1.17.x"
       - name: Run tests with coverage and race detector
