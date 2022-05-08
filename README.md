@@ -85,7 +85,7 @@ To skip a workflow, include a [supported keyword like `[skip actions]`][43] in a
 
 #### Automated Dependency Updates
 
-Next to the [Dependabot configuration derived from the base _tmpl_ template repository][50] the [`dependabot.yml` file][31] additionally additionally includes [configurations][45] for [Go Module](#go-module) dependencies.
+Next to the [Dependabot configuration derived from the base _tmpl_ template repository][50] the [`dependabot.tmpl.yml` file][31] additionally additionally includes [configurations][45] for [Go Module](#go-module) dependencies.
 
 Make sure to read the [_tmpl_ template repository documentation about automated dependency updates][50] to learn how to enable or disable Dependabot for a GitHub repository.
 
@@ -164,7 +164,7 @@ The guide also includes information about [minimal, complete, and verifiable exa
 [28]: https://github.com/svengreb/tmpl-go/blob/main/apps/README.md
 [29]: https://github.com/svengreb/tmpl-go/blob/main/config/README.md
 [30]: https://github.com/svengreb/tmpl-go/blob/main/docs/README.md
-[31]: https://github.com/svengreb/tmpl-go/blob/main/.github/dependabot.yml
+[31]: https://github.com/svengreb/tmpl-go/blob/main/.github/dependabot.tmpl.yml
 [32]: https://github.com/svengreb/tmpl-go/blob/main/.golangci.yml
 [33]: https://github.com/svengreb/tmpl-go/blob/main/examples/README.md
 [34]: https://github.com/svengreb/tmpl-go/blob/main/go.mod
